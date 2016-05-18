@@ -38,7 +38,7 @@ function guessHistory(guessedNumber) {
 }
 
 //function to implement a simple validation of the insert input
-function validate(guessedNumber) {
+function validate(guessedNumber, newGuess) {
 
     //check the guessed number in the console
     //console.log("Guessed Number: " + guessedNumber);
@@ -143,10 +143,9 @@ $(document).ready(function () {
 
         var newGuess = guessedNumber;
 
-        validate(guessedNumber);
-
-
+        validate(guessedNumber, newGuess);
     });
+
 
     $(document).on("keypress", function (event) {
         //on enter
@@ -158,7 +157,7 @@ $(document).ready(function () {
 
             var newGuess = guessedNumber;
 
-            validate(guessedNumber);
+            validate(guessedNumber, newGuess);
 
         }
 
